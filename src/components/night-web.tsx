@@ -20,16 +20,16 @@ export default function NightWeb() {
 
   return (
     <SpiderParticles
-      particleCount={72}
-      particleSize={7}
-      spotlightRadius={210}
-      mouseConnectDist={130}
+      particleCount={110}
+      particleSize={6}
+      spotlightRadius={240}
+      mouseConnectDist={150}
       showWeb
       particlesGlow
-      particleColor="#f4e7d2"
-      glowColor="#e7c27a"
-      webColor="#d9c6f2"
-      centerColor="#f6c56b"
+      particleColor="#ffb24a"
+      glowColor="#ff5a1f"
+      webColor="#ff8a3d"
+      centerColor="#ffd27a"
     />
   );
 }

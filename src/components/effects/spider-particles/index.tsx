@@ -136,36 +136,33 @@ export default function SpiderParticles({
 
     const isDesktop = () => window.innerWidth >= 1025;
 
+    // Listens on window so content layered above the canvas doesn't block tracking.
     const onMove = (e: MouseEvent) => {
       if (!isDesktop()) return;
       const rect = mount.getBoundingClientRect();
+      const inside =
+        e.clientX >= rect.left && e.clientX <= rect.right &&
+        e.clientY >= rect.top  && e.clientY <= rect.bottom;
+      if (!inside) {
+        mousePresent     = false;
+        mouseJustEntered = false;
+        return;
+      }
       mouse.set(
         e.clientX - rect.left - width / 2,
         -(e.clientY - rect.top - height / 2),
       );
-    };
-
-    const onEnter = (e: MouseEvent) => {
-      if (!isDesktop()) return;
-      // Capture exact entry position so smoothMouse can snap without lerp drift
-      const rect = mount.getBoundingClientRect();
-      mouse.set(
-        e.clientX - rect.left - width / 2,
-        -(e.clientY - rect.top - height / 2),
-      );
-      mouseJustEntered = true;
-      mousePresent     = true;
+      if (!mousePresent) mouseJustEntered = true;
+      mousePresent = true;
     };
 
     const onLeave = () => {
-      if (!isDesktop()) return;
       mousePresent     = false;
       mouseJustEntered = false;
     };
 
-    mount.addEventListener("mousemove",  onMove);
-    mount.addEventListener("mouseenter", onEnter);
-    mount.addEventListener("mouseleave", onLeave);
+    window.addEventListener("mousemove", onMove);
+    document.documentElement.addEventListener("mouseleave", onLeave);
 
     const onTouch = (e: TouchEvent) => {
       if (!isDesktop()) return;
@@ -410,9 +407,8 @@ export default function SpiderParticles({
       loop.destroy();
       window.removeEventListener("resize", onResize);
       if (mount) {
-        mount.removeEventListener("mousemove",  onMove);
-        mount.removeEventListener("mouseenter", onEnter);
-        mount.removeEventListener("mouseleave", onLeave);
+        window.removeEventListener("mousemove", onMove);
+        document.documentElement.removeEventListener("mouseleave", onLeave);
         mount.removeEventListener("touchmove",  onTouch);
         mount.removeEventListener("touchend",   onTouchEnd);
         if (mount.contains(renderer.domElement)) {
@@ -444,7 +440,7 @@ export default function SpiderParticles({
   return (
     <div
       ref={mountRef}
-      className={`relative h-full w-full overflow-hidden ${className}`}
+      className={`pointer-events-none relative h-full w-full overflow-hidden ${className}`}
     />
   );
 }

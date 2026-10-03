@@ -1,17 +1,27 @@
-# 30 October, Beddoe Avenue
+# Halloween at Beddoe
 
-A Halloween pre-drinks invitation for Friday 30 October, 6:00 until 10:00, at 3/41 Beddoe Avenue, Clayton. Costume required. Bring drinks and snacks. Afterwards, Halloween Havoc at Ms Collins.
+A one-page website for Halloween pre-drinks on Friday 30 October 2026, from 6pm at 3/41 Beddoe Avenue, Clayton. Costume required, BYO drinks and snacks. Afterwards everyone heads to Halloween Havoc at Ms Collins.
 
-The night sky uses the Spider Particles effect from [Hyperiux Vault](https://21st.dev/@hyperiux/library/hyperiux-vault) on 21st. The RSVP control is the Shiny Button from the same library. It opens a WhatsApp group.
+The look takes its cues from the Halloween Havoc poster: a glowing halftone jack-o'-lantern, cream flared serif type (Cinzel), a yellow marker accent (Permanent Marker) and wide Archivo for the details.
+
+The page has:
+
+- a hero with a live countdown to 6pm Melbourne time
+- the plan for the night
+- what to bring, with a link to Havoc tickets on Eventbrite
+- a map of the house and directions to Ms Collins
+- an RSVP button that opens WhatsApp
+
+The cursor spider web in the hero is Spider Particles, and the RSVP control is Shiny Button. Both come from [Hyperiux Vault](https://21st.dev/@hyperiux/library/hyperiux-vault) on 21st.
 
 ## Run it
 
 ```bash
 npm install
-npm run dev
+npm run dev -- --port 43123
 ```
 
-Open [http://127.0.0.1:43123](http://127.0.0.1:43123) if you start the dev server with `-p 43123`. The default Next.js port is 3000.
+Then open [http://127.0.0.1:43123](http://127.0.0.1:43123).
 
 ## WhatsApp group
 

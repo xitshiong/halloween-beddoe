@@ -1,30 +1,41 @@
 import type { Metadata } from "next";
-import { Bodoni_Moda, Karla } from "next/font/google";
+import { Archivo, Cinzel, Permanent_Marker } from "next/font/google";
 import "./globals.css";
 
-const bodoni = Bodoni_Moda({
+const cinzel = Cinzel({
   subsets: ["latin"],
-  style: ["normal", "italic"],
-  variable: "--font-bodoni",
+  weight: ["600", "800"],
+  variable: "--font-cinzel",
   display: "swap",
 });
 
-const karla = Karla({
+const archivo = Archivo({
   subsets: ["latin"],
-  variable: "--font-karla",
+  axes: ["wdth"],
+  variable: "--font-archivo",
+  display: "swap",
+});
+
+const marker = Permanent_Marker({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-marker",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "30 October, Beddoe Avenue",
+  title: "Halloween at Beddoe | Friday 30 October",
   description:
-    "Friday 30 October, 6:00 until 10:00 at 3/41 Beddoe Avenue, Clayton. Halloween costume required. Then Halloween Havoc at Ms Collins.",
+    "Pre-drinks at 3/41 Beddoe Avenue, Clayton, from 6pm on Friday 30 October 2026. Costume required, BYO drinks and snacks. Then Halloween Havoc at Ms Collins.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${bodoni.variable} ${karla.variable} h-full`}>
-      <body className="min-h-full">{children}</body>
+    <html
+      lang="en"
+      className={`${cinzel.variable} ${archivo.variable} ${marker.variable}`}
+    >
+      <body>{children}</body>
     </html>
   );
 }

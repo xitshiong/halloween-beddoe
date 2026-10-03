@@ -7,36 +7,38 @@
  */
 export const WHATSAPP_GROUP_URL = "";
 
+/** Melbourne is on AEDT (UTC+11) at the end of October. */
+export const startsAt = "2026-10-30T18:00:00+11:00";
+export const endsAt = "2026-10-30T22:00:00+11:00";
+
 export const party = {
-  day: "30",
-  month: "October",
-  when: "Friday, from 6:00 until 10:00",
-  address: "3/41 Beddoe Avenue, Clayton",
+  address: "3/41 Beddoe Avenue",
+  suburb: "Clayton VIC 3168",
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=3%2F41+Beddoe+Avenue+Clayton+VIC+3168",
-  bring:
-    "Wear a Halloween costume. Bring alcohol or other drinks, and snacks.",
-  afterLead: "Afterwards we are going to Halloween Havoc at",
-  club: "Ms Collins, 425 Collins Street",
+  mapEmbed:
+    "https://www.google.com/maps?q=3%2F41+Beddoe+Avenue+Clayton+VIC+3168&z=15&output=embed",
+  club: "Ms Collins",
+  clubAddress: "425 Collins Street, Melbourne",
   clubMaps:
     "https://www.google.com/maps/search/?api=1&query=Ms+Collins+425+Collins+Street+Melbourne",
-  afterNote: "From 9pm, and you need to be 18 or older.",
+  ticketsUrl:
+    "https://www.eventbrite.com.au/e/halloween-havoc-tickets-1993663296588",
 };
 
 const rsvpMessage =
-  "I'm in for Friday 30 October, 6:00 until 10:00, at 3/41 Beddoe Avenue.";
+  "I'm in for Halloween at Beddoe: Friday 30 October, 6pm, 3/41 Beddoe Avenue.";
+
+function groupUrl() {
+  return process.env.NEXT_PUBLIC_WHATSAPP_GROUP_URL || WHATSAPP_GROUP_URL;
+}
 
 export function rsvpHref() {
-  const group =
-    process.env.NEXT_PUBLIC_WHATSAPP_GROUP_URL || WHATSAPP_GROUP_URL;
-  if (group) return group;
-  return `https://wa.me/?text=${encodeURIComponent(rsvpMessage)}`;
+  return groupUrl() || `https://wa.me/?text=${encodeURIComponent(rsvpMessage)}`;
 }
 
 export function rsvpHint() {
-  const group =
-    process.env.NEXT_PUBLIC_WHATSAPP_GROUP_URL || WHATSAPP_GROUP_URL;
-  return group
+  return groupUrl()
     ? "Opens the WhatsApp group."
     : "Opens WhatsApp with your RSVP.";
 }

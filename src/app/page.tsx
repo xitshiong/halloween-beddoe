@@ -69,7 +69,6 @@ export default function Home() {
           </div>
 
           <div className={styles.heroInner}>
-            <p className={styles.kicker}>The pre-drinks before the havoc</p>
             <h1 className={styles.title}>
               <span className={styles.titleTop}>Halloween</span>
               <span className={styles.titleBottom}>at Beddoe</span>

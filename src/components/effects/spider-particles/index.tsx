@@ -444,7 +444,7 @@ export default function SpiderParticles({
   return (
     <div
       ref={mountRef}
-      className={`relative h-full w-full overflow-hidden cursor-none ${className}`}
+      className={`relative h-full w-full overflow-hidden ${className}`}
     />
   );
 }

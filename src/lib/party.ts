@@ -38,5 +38,5 @@ export function rsvpHint() {
     process.env.NEXT_PUBLIC_WHATSAPP_GROUP_URL || WHATSAPP_GROUP_URL;
   return group
     ? "Opens the WhatsApp group."
-    : "Opens WhatsApp with your RSVP ready to send.";
+    : "Opens WhatsApp with your RSVP.";
 }

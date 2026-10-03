@@ -43,22 +43,7 @@ function Rsvp({ big = false }: { big?: boolean }) {
 
 export default function Home() {
   return (
-    <>
-      <header className={styles.nav}>
-        <a href="#top" className={styles.brand}>
-          Beddoe <span>30.10</span>
-        </a>
-        <nav aria-label="Sections" className={styles.links}>
-          <a href="#plan">The night</a>
-          <a href="#bring">Bring</a>
-          <a href="#where">Where</a>
-        </nav>
-        <a href={rsvpHref()} target="_blank" rel="noopener noreferrer" className={styles.navRsvp}>
-          RSVP
-        </a>
-      </header>
-
-      <main id="top">
+    <main id="top">
         <section className={styles.hero}>
           <div className={styles.glow} aria-hidden="true">
             <Pumpkin className={styles.pumpkin} />
@@ -175,12 +160,11 @@ export default function Home() {
           <Rsvp big />
           <p className={styles.hint}>{rsvpHint()}</p>
         </section>
-      </main>
 
       <footer className={styles.footer}>
         <p>Halloween at Beddoe, Friday 30 October 2026.</p>
         <p>See you in costume.</p>
       </footer>
-    </>
+    </main>
   );
 }

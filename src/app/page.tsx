@@ -13,7 +13,7 @@ const plan = [
     body: `Costumes on, drinks out. ${party.address}, Clayton.`,
   },
   {
-    time: "10:00",
+    time: "10:30",
     meridiem: "pm",
     title: "Into the city",
     body: "Pre-drinks wrap up and we head to Collins Street together.",

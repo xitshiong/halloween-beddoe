@@ -35,3 +35,25 @@
   font-size: clamp(1.4rem, 4vw, 2rem);
   color: var(--marker);
 }
+
+@media (max-width: 720px) {
+  .clock {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.35rem;
+    padding-inline: 0.15rem;
+  }
+
+  .unit {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .value {
+    font-size: clamp(1.55rem, 7.5vw, 2.1rem);
+  }
+
+  .label {
+    font-size: 0.7rem;
+  }
+}

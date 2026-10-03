@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Archivo, Cinzel, Permanent_Marker } from "next/font/google";
 import "./globals.css";
 
@@ -27,6 +27,13 @@ export const metadata: Metadata = {
   title: "Halloween at Beddoe | Friday 30 October",
   description:
     "Pre-drinks at 3/41 Beddoe Avenue, Clayton, from 6pm on Friday 30 October 2026. Costume required, BYO drinks and snacks. Then Halloween Havoc at Ms Collins.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#140705",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

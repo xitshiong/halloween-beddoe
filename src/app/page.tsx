@@ -136,7 +136,7 @@ export default function Home() {
                 </a>
               </div>
               <div className={styles.place}>
-                <p className={styles.placeWhen}>After 10pm</p>
+                <p className={styles.placeWhen}>After 10:30pm</p>
                 <h3>{party.club}</h3>
                 <p>{party.clubAddress}</p>
                 <a href={party.clubMaps} target="_blank" rel="noopener noreferrer">

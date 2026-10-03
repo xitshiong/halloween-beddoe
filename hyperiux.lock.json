@@ -1,0 +1,12 @@
+{
+  "components": {
+    "spider-particles": {
+      "version": "1.0.1",
+      "installedAt": "2026-10-03T09:12:28.551Z",
+      "files": {
+        "src/components/effects/spider-particles/index.tsx": "sha256:224d7922cd41636dad8a26f79e1d4d118a884d424ea5a2ab363d5a70aa46b542",
+        "src/components/effects/spider-particles/createSuspendedRaf.ts": "sha256:98c2603a726099abd22e6efe779f31b5bb392ad5a608bf8fbd47c7a7f242d367"
+      }
+    }
+  }
+}

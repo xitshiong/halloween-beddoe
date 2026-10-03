@@ -18,12 +18,6 @@ const plan = [
     title: "Into the city",
     body: "Pre-drinks wrap up and we head to Collins Street together.",
   },
-  {
-    time: "5:00",
-    meridiem: "am",
-    title: "Halloween Havoc ends",
-    body: "Ms Collins runs until 5am. You need a ticket and you need to be 18 or older.",
-  },
 ];
 
 function Rsvp({ big = false }: { big?: boolean }) {

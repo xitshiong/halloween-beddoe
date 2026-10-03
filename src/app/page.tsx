@@ -85,7 +85,6 @@ export default function Home() {
                 See the plan
               </a>
             </div>
-            <p className={styles.hint}>{rsvpHint()}</p>
           </div>
         </section>
 

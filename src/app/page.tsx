@@ -20,11 +20,11 @@ const plan = [
   },
 ];
 
-function Rsvp({ big = false }: { big?: boolean }) {
+function Rsvp({ big = false, label = "RSVP" }: { big?: boolean; label?: string }) {
   return (
     <ShinyButton
       href={rsvpHref()}
-      label="RSVP on WhatsApp"
+      label={label}
       className={big ? styles.ctaBig : styles.cta}
       fillColor="#7a1408"
       labelColor="#f3e6cf"

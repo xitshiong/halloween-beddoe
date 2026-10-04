@@ -5,22 +5,6 @@ import ShinyButton from "@/components/effects/shiny-button";
 import { party, rsvpHref } from "@/lib/party";
 import styles from "./page.module.css";
 
-const plan = [
-  {
-    time: "6:00",
-    meridiem: "pm",
-    title: "Doors open at Beddoe",
-    body: `Costumes on, drinks out. ${party.address}, Clayton.`,
-  },
-  {
-    time: "10:30",
-    meridiem: "pm",
-    title: "Into the city",
-    body: "Pre-drinks wrap up and we head to Collins Street together.",
-    optional: true,
-  },
-];
-
 function Rsvp({ big = false, label = "RSVP" }: { big?: boolean; label?: string }) {
   return (
     <ShinyButton
@@ -72,21 +56,25 @@ export default function Home() {
             <h2 className={styles.h2}>The night</h2>
           </div>
           <ol className={styles.steps}>
-            {plan.map((step) => (
-              <li key={step.title} className={styles.step}>
-                <p className={styles.time}>
-                  {step.time}
-                  <small>{step.meridiem}</small>
+            <li className={styles.step}>
+              <p className={styles.time}>
+                6:00
+                <small>pm</small>
+              </p>
+              <div>
+                <h3 className={styles.stepTitle}>Doors open at Beddoe</h3>
+                <p className={styles.stepBody}>
+                  Costumes on, drinks out. {party.address}, Clayton.
                 </p>
-                <div>
-                  {"optional" in step && step.optional ? (
-                    <p className={styles.optionalTag}>Optional</p>
-                  ) : null}
-                  <h3 className={styles.stepTitle}>{step.title}</h3>
-                  <p className={styles.stepBody}>{step.body}</p>
-                </div>
-              </li>
-            ))}
+                <aside className={styles.sideNote}>
+                  <p className={styles.optionalTag}>Optional</p>
+                  <p className={styles.sideNoteBody}>
+                    At 10:30pm we&rsquo;re heading to Collins Street together for
+                    Halloween Havoc.
+                  </p>
+                </aside>
+              </div>
+            </li>
           </ol>
         </section>
 

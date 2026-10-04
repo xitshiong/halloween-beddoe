@@ -283,7 +283,7 @@
 }
 
 .optionalTag {
-  margin: 0 0 0.35rem;
+  margin: 0;
   font-family: var(--font-marker), cursive;
   font-size: 1.05rem;
   color: var(--marker);
@@ -303,6 +303,20 @@
   font-size: 1.05rem;
   line-height: 1.6;
   color: rgba(243, 230, 207, 0.78);
+}
+
+.sideNote {
+  margin-top: 1.25rem;
+  max-width: 36ch;
+  padding: 0.9rem 0 0.15rem;
+  border-top: 1px dashed rgba(255, 90, 31, 0.45);
+}
+
+.sideNoteBody {
+  margin: 0.35rem 0 0;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: rgba(243, 230, 207, 0.72);
 }
 
 /* Bring */

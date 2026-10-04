@@ -91,7 +91,7 @@ export default function Home() {
           <div className={styles.bringGrid}>
             <div className={styles.costume}>
               <p className={styles.costumeWord}>A costume</p>
-              <p className={styles.costumeNote}>Required. No costume, no entry.</p>
+              <p className={styles.costumeNote}>Required. No costume, no entry. :)</p>
             </div>
             <div className={styles.bringItem}>
               <h3>Your own drinks</h3>

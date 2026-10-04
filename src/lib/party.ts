@@ -37,9 +37,3 @@ function groupUrl() {
 export function rsvpHref() {
   return groupUrl() || `https://wa.me/?text=${encodeURIComponent(rsvpMessage)}`;
 }
-
-export function rsvpHint() {
-  return groupUrl()
-    ? "Opens the WhatsApp group."
-    : "Opens WhatsApp with your RSVP.";
-}

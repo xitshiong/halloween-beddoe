@@ -69,7 +69,6 @@ export default function Home() {
         <section id="plan" className={styles.plan}>
           <div className={styles.sectionHead}>
             <h2 className={styles.h2}>The night</h2>
-            <p className={styles.scrawl}>one house, one club, no early exits</p>
           </div>
           <ol className={styles.steps}>
             {plan.map((step) => (

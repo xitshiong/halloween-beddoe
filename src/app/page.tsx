@@ -2,7 +2,7 @@ import Countdown from "@/components/countdown";
 import NightWeb from "@/components/night-web";
 import Pumpkin from "@/components/pumpkin";
 import ShinyButton from "@/components/effects/shiny-button";
-import { party, rsvpHint, rsvpHref } from "@/lib/party";
+import { party, rsvpHref } from "@/lib/party";
 import styles from "./page.module.css";
 
 const plan = [

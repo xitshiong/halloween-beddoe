@@ -15,7 +15,7 @@ const plan = [
   {
     time: "10:30",
     meridiem: "pm",
-    title: "Into the city",
+    title: "Into the city (optional)",
     body: "Pre-drinks wrap up and we head to Collins Street together.",
   },
 ];

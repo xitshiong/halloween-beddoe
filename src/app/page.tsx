@@ -151,7 +151,6 @@ export default function Home() {
           <p className={styles.kicker}>Tell us you&rsquo;re in</p>
           <h2 className={styles.finalTitle}>Are you coming?</h2>
           <Rsvp big />
-          <p className={styles.hint}>{rsvpHint()}</p>
         </section>
 
       <footer className={styles.footer}>

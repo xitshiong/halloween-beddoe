@@ -282,6 +282,14 @@
   color: var(--ember-soft);
 }
 
+.optionalTag {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-marker), cursive;
+  font-size: 1.05rem;
+  color: var(--marker);
+  rotate: -2deg;
+}
+
 .stepTitle {
   margin: 0;
   font-stretch: 125%;

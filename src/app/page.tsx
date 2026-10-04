@@ -15,8 +15,9 @@ const plan = [
   {
     time: "10:30",
     meridiem: "pm",
-    title: "Into the city (optional)",
+    title: "Into the city",
     body: "Pre-drinks wrap up and we head to Collins Street together.",
+    optional: true,
   },
 ];
 
@@ -78,6 +79,9 @@ export default function Home() {
                   <small>{step.meridiem}</small>
                 </p>
                 <div>
+                  {"optional" in step && step.optional ? (
+                    <p className={styles.optionalTag}>Optional</p>
+                  ) : null}
                   <h3 className={styles.stepTitle}>{step.title}</h3>
                   <p className={styles.stepBody}>{step.body}</p>
                 </div>

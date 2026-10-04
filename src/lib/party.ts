@@ -5,11 +5,12 @@
  * You can also set NEXT_PUBLIC_WHATSAPP_GROUP_URL in .env.local.
  * When neither is set, RSVP opens WhatsApp with a message ready to send.
  */
-export const WHATSAPP_GROUP_URL = "";
+export const WHATSAPP_GROUP_URL =
+  "https://chat.whatsapp.com/LIYoqpVElz78xQg824sXyK?mode=gi_t";
 
 /** Melbourne is on AEDT (UTC+11) at the end of October. */
 export const startsAt = "2026-10-30T18:00:00+11:00";
-export const endsAt = "2026-10-30T22:00:00+11:00";
+export const endsAt = "2026-10-30T22:30:00+11:00";
 
 export const party = {
   address: "3/41 Beddoe Avenue",

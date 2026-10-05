@@ -23,10 +23,40 @@ const marker = Permanent_Marker({
   display: "swap",
 });
 
+const siteUrl = "https://halloween-beddoe.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Halloween at Beddoe | Friday 30 October",
   description:
     "Pre-drinks at 3/41 Beddoe Avenue, Clayton, from 6pm on Friday 30 October 2026. Costume required, BYO drinks and snacks. Then Halloween Havoc at Ms Collins.",
+  icons: {
+    icon: [{ url: "/icon.jpg", type: "image/jpeg" }],
+    apple: [{ url: "/icon.jpg", type: "image/jpeg" }],
+  },
+  openGraph: {
+    title: "Halloween at Beddoe | Friday 30 October",
+    description:
+      "Pre-drinks at 3/41 Beddoe Avenue, Clayton, from 6pm. Costume required. Then Halloween Havoc at Ms Collins.",
+    url: siteUrl,
+    siteName: "Halloween at Beddoe",
+    type: "website",
+    images: [
+      {
+        url: "/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Halloween at Beddoe — glowing jack-o'-lantern invite",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Halloween at Beddoe | Friday 30 October",
+    description:
+      "Pre-drinks at 3/41 Beddoe Avenue, Clayton, from 6pm. Costume required.",
+    images: ["/og.jpg"],
+  },
 };
 
 export const viewport: Viewport = {

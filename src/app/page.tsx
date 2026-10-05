@@ -31,6 +31,7 @@ export default function Home() {
           <div className={styles.web} aria-hidden="true">
             <NightWeb />
           </div>
+          <div className={styles.heroFade} aria-hidden="true" />
 
           <div className={styles.heroInner}>
             <h1 className={styles.title}>
